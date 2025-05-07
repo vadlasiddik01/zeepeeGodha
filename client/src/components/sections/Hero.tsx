@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ClipboardIcon, CommentsIcon, CalendarIcon } from "@/lib/icons";
@@ -85,15 +85,15 @@ export function Hero() {
               className="text-gray-600 text-lg mb-8 leading-relaxed max-w-lg"
               variants={itemVariants}
             >
-              We provide quality healthcare services with a team of experienced medical professionals. 
-              Our goal is to ensure you receive the best medical attention and care for your health needs.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, 
+              luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet.
             </motion.p>
             
             <motion.div variants={itemVariants}>
               <a href="#contact" onClick={scrollToContact}>
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white uppercase font-medium px-8 py-4 rounded-md transition-all duration-300"
+                  className="bg-primary hover:bg-primary/90 text-white uppercase font-medium px-8 py-3 rounded-md transition-all duration-300"
                 >
                   BOOK APPOINTMENT
                 </Button>
@@ -108,30 +108,45 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              {/* Main image with blue background */}
-              <div className="rounded-[40px] bg-primary/30 overflow-hidden relative">
-                <img
-                  src={heroImage}
-                  alt="Doctor with stethoscope"
-                  className="w-full h-auto object-contain"
-                />
+              {/* Main image container with blue background - exact styling from reference */}
+              <div className="rounded-[40px] bg-primary/30 overflow-hidden relative h-[380px] md:h-[480px]">
+                {/* The image will be rendered here from the asset */}
+                <div className="w-full h-full relative">
+                  <div 
+                    className="w-full h-full bg-contain bg-no-repeat bg-center"
+                    style={{ backgroundImage: `url(${heroImage})` }}
+                  />
+                </div>
                 
-                {/* Decorative pattern */}
-                <div className="absolute top-3 right-3">
+                {/* Decorative dot pattern in top right */}
+                <div className="absolute top-4 right-4">
                   <div className="grid grid-cols-6 grid-rows-6 gap-1">
                     {Array(36).fill(0).map((_, i) => (
-                      <div key={i} className="w-1.5 h-1.5 bg-secondary rounded-full opacity-70"></div>
+                      <div key={i} className="w-1.5 h-1.5 bg-secondary/70 rounded-full"></div>
                     ))}
                   </div>
                 </div>
                 
-                {/* Decorative line */}
-                <div className="absolute bottom-6 left-0 w-12 h-0.5 bg-gray-300 transform rotate-45"></div>
+                {/* Decorative diagonal lines in bottom left */}
+                <div className="absolute bottom-10 left-0">
+                  <div className="space-y-0.5">
+                    {Array(3).fill(0).map((_, i) => (
+                      <div 
+                        key={i} 
+                        className="h-0.5 bg-white/40" 
+                        style={{ 
+                          width: `${20 - i * 4}px`, 
+                          transform: `translateY(${i * 3}px) rotate(45deg)` 
+                        }}
+                      ></div>
+                    ))}
+                  </div>
+                </div>
               </div>
 
-              {/* Floating Elements */}
+              {/* Floating Icon Elements - positioned exactly like in reference */}
               <motion.div 
-                className="absolute top-12 left-1/2 -translate-x-1/2 bg-white p-3 rounded-xl shadow-md"
+                className="absolute top-12 left-0 -translate-x-1/2 bg-white p-3 rounded-xl shadow-md z-10"
                 variants={floatingIconVariants}
                 custom={0}
                 whileHover={{ y: -5 }}
@@ -140,7 +155,7 @@ export function Hero() {
               </motion.div>
               
               <motion.div 
-                className="absolute bottom-1/3 right-0 translate-x-1/4 bg-white p-3 rounded-xl shadow-md"
+                className="absolute top-1/4 right-0 translate-x-1/2 bg-white p-3 rounded-xl shadow-md z-10"
                 variants={floatingIconVariants}
                 custom={1}
                 whileHover={{ y: -5 }}
@@ -149,7 +164,7 @@ export function Hero() {
               </motion.div>
               
               <motion.div 
-                className="absolute bottom-16 left-0 -translate-x-1/4 bg-white p-3 rounded-xl shadow-md"
+                className="absolute bottom-1/4 left-10 bg-white p-3 rounded-xl shadow-md z-10"
                 variants={floatingIconVariants}
                 custom={2}
                 whileHover={{ y: -5 }}

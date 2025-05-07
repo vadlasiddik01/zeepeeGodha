@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaStethoscope } from "react-icons/fa";
 import aboutImage from "@assets/about.png";
 
 export function About() {
@@ -29,11 +29,10 @@ export function About() {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.9, rotate: -5 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: { 
       opacity: 1, 
-      scale: 1, 
-      rotate: 0, 
+      scale: 1,  
       transition: { 
         duration: 0.8, 
         ease: "easeOut" 
@@ -102,43 +101,41 @@ export function About() {
             className="md:w-1/2 relative"
             variants={itemVariants}
           >
-            <div className="relative">
-              <motion.div
-                className="absolute -z-10 w-full h-full bg-primary/10 rounded-tl-[100px] rounded-br-[100px] right-5 bottom-5"
-                variants={imageVariants}
-                custom={1}
-              />
+            <div className="relative flex justify-center">
+              {/* Main circular image container with border */}
               <motion.div 
-                className="rounded-tl-[100px] rounded-br-[100px] relative overflow-hidden border-8 border-white shadow-xl"
+                className="w-[350px] h-[350px] md:w-[400px] md:h-[400px] relative"
                 variants={imageVariants}
               >
-                <img
-                  src={aboutImage}
-                  alt="Medical professionals collaborating"
-                  className="w-full h-auto object-cover"
-                />
+                {/* Circle border animation */}
+                <div className="absolute inset-0 rounded-full border-[15px] border-white bg-white shadow-lg"></div>
                 
-                <motion.div 
-                  className="absolute left-0 bottom-12 bg-white rounded-r-full py-4 px-6 shadow-lg flex items-center"
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={isIntersecting ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                >
-                  <div className="text-secondary text-4xl font-bold mr-2">10+</div>
-                  <div className="text-gray-800 font-medium">Years<br />Experience</div>
-                </motion.div>
+                {/* Image container */}
+                <div className="absolute inset-[15px] rounded-full overflow-hidden">
+                  {/* Background image styling */}
+                  <div 
+                    className="w-full h-full bg-cover bg-center"
+                    style={{ backgroundImage: `url(${aboutImage})` }}
+                  ></div>
+                </div>
                 
-                <motion.div 
-                  className="absolute top-12 right-0 w-16 h-16 bg-primary rounded-l-full flex items-center justify-center shadow-lg"
-                  initial={{ x: 100, opacity: 0 }}
-                  animate={isIntersecting ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
-                  transition={{ delay: 0.6, duration: 0.6 }}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
-                </motion.div>
+                {/* Experience badge */}
+                <div className="absolute -left-8 bottom-16 bg-white rounded-full p-4 shadow-lg flex items-center justify-center w-32 h-32">
+                  <div>
+                    <div className="text-4xl font-bold text-primary text-center">10+</div>
+                    <div className="text-sm text-gray-700 text-center">Years Experience</div>
+                  </div>
+                </div>
+                
+                {/* Stethoscope icon circle */}
+                <div className="absolute -right-4 top-8 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-md">
+                  <FaStethoscope className="text-white text-2xl" />
+                </div>
               </motion.div>
+              
+              {/* Background decorative elements */}
+              <div className="absolute -bottom-4 -right-4 w-3/4 h-3/4 bg-primary/5 rounded-full -z-10"></div>
+              <div className="absolute -top-4 -left-4 w-1/2 h-1/2 bg-gray-100 rounded-full -z-10"></div>
             </div>
           </motion.div>
         </div>

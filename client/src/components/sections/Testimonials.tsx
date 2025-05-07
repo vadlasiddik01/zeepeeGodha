@@ -2,7 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaQuoteLeft } from "react-icons/fa";
+import testimonialImage from "@assets/testimonial.png";
 
 const testimonials = [
   {
@@ -49,55 +50,119 @@ export function Testimonials() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   };
 
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { 
+        duration: 0.8,
+        ease: "easeOut"
+      } 
+    }
+  };
+
   return (
     <section
       id="testimonials"
-      className="py-16 bg-white"
+      className="py-20 bg-gradient-to-b from-white to-gray-50"
       ref={ref}
     >
       <div className="container mx-auto px-4">
-        <SectionHeading
-          subHeading="TESTIMONY"
-          heading="What Our Patients Say About Us"
-          description="Hear from our satisfied patients about their experiences with our healthcare services."
-          centered
-        />
-        
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate={isIntersecting ? "visible" : "hidden"}
-        >
-          {testimonials.map((testimonial) => (
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <motion.div 
+            className="lg:w-1/2"
+            initial={{ opacity: 0, x: -30 }}
+            animate={isIntersecting ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <SectionHeading
+              subHeading="TESTIMONY"
+              heading="What Our Patients Say About Us"
+              description="Hear from our satisfied patients about their experiences with our healthcare services. We pride ourselves on providing exceptional care and value feedback from those we serve."
+            />
+            
             <motion.div
-              key={testimonial.id}
-              className="bg-white rounded-lg border border-gray-100 shadow-sm p-6"
+              className="relative mt-10 p-8 bg-white rounded-xl shadow-lg border border-gray-100"
               variants={itemVariants}
+              initial="hidden"
+              animate={isIntersecting ? "visible" : "hidden"}
+              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)" }}
+              transition={{ duration: 0.3 }}
             >
-              <div className="flex justify-center mb-4">
-                <img 
-                  src={testimonial.avatarUrl}
-                  alt={`${testimonial.name}`}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
+              <FaQuoteLeft className="text-primary/20 text-4xl absolute top-6 left-6" />
+              
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 mr-4 overflow-hidden rounded-full border-2 border-primary p-1">
+                  <motion.img 
+                    src={testimonials[0].avatarUrl}
+                    alt={testimonials[0].name}
+                    className="w-full h-full rounded-full object-cover"
+                    whileHover={{ scale: 1.15 }}
+                    transition={{ duration: 0.4 }}
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">{testimonials[0].name}</h4>
+                  <p className="text-gray-500">{testimonials[0].role}</p>
+                </div>
               </div>
               
-              <div className="flex justify-center text-accent mb-4">
-                {Array(testimonial.rating).fill(0).map((_, i) => (
-                  <FaStar key={i} />
+              <div className="flex text-yellow-400 mb-4">
+                {Array(testimonials[0].rating).fill(0).map((_, i) => (
+                  <FaStar key={i} className="mr-1" />
                 ))}
               </div>
               
-              <p className="text-gray-600 text-center italic mb-4">"{testimonial.quote}"</p>
-              
-              <div className="text-center">
-                <h4 className="font-bold">{testimonial.name}</h4>
-                <p className="text-gray-500 text-sm">{testimonial.role}</p>
-              </div>
+              <p className="text-gray-700 italic leading-relaxed mb-4">"{testimonials[0].quote}"</p>
             </motion.div>
-          ))}
-        </motion.div>
+          </motion.div>
+          
+          <motion.div 
+            className="lg:w-1/2 relative"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isIntersecting ? "visible" : "hidden"}
+          >
+            <motion.div 
+              className="relative z-10"
+              variants={imageVariants}
+            >
+              <div className="rounded-tr-[80px] rounded-bl-[80px] overflow-hidden shadow-xl">
+                <img 
+                  src={testimonialImage} 
+                  alt="Happy patients with doctor"
+                  className="w-full h-auto"
+                />
+              </div>
+              
+              <motion.div 
+                className="absolute bottom-6 left-6 right-6 bg-white p-6 rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isIntersecting ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+              >
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-3xl font-bold text-primary">98%</div>
+                    <div className="text-sm text-gray-600">Satisfaction Rate</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-primary">10k+</div>
+                    <div className="text-sm text-gray-600">Happy Patients</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-primary">15+</div>
+                    <div className="text-sm text-gray-600">Years Experience</div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+            
+            <div className="absolute top-1/4 -right-4 w-32 h-32 bg-primary/10 rounded-full -z-10"></div>
+            <div className="absolute bottom-1/3 -left-4 w-24 h-24 bg-secondary/10 rounded-full -z-10"></div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

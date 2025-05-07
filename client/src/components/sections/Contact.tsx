@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { LocationIcon, PhoneIcon, EmailIcon } from "@/lib/icons";
+import { LocationIcon, PhoneIcon, EmailIcon, FacebookIcon, TwitterIcon, InstagramIcon, LinkedInIcon } from "@/lib/icons";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -42,6 +42,13 @@ const contactDetails = [
     title: "Email Address",
     content: "contact@mydoctor.com"
   }
+];
+
+const socialMedia = [
+  { id: 1, icon: <FacebookIcon />, href: "#", label: "Facebook" },
+  { id: 2, icon: <TwitterIcon />, href: "#", label: "Twitter" },
+  { id: 3, icon: <InstagramIcon />, href: "#", label: "Instagram" },
+  { id: 4, icon: <LinkedInIcon />, href: "#", label: "LinkedIn" },
 ];
 
 export function Contact() {
@@ -77,13 +84,28 @@ export function Contact() {
   
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5 } }
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
   };
 
   return (
     <section
       id="contact"
-      className="py-16 bg-white"
+      className="py-20 bg-gradient-to-b from-white to-gray-50"
       ref={ref}
     >
       <motion.div
@@ -92,116 +114,166 @@ export function Contact() {
         initial="hidden"
         animate={isIntersecting ? "visible" : "hidden"}
       >
-        <div className="flex flex-col md:flex-row gap-12">
-          <div className="md:w-1/2">
-            <SectionHeading
-              subHeading="CONTACT US"
-              heading="Get in Touch With Our Team"
-            />
-            <p className="text-gray-600 mb-8">
-              Have questions about our services or want to schedule an appointment? 
-              Reach out to us using any of the methods below.
-            </p>
-            
-            <div className="space-y-6">
-              {contactDetails.map((detail) => (
-                <div key={detail.id} className="flex items-start">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                    {detail.icon}
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">{detail.title}</h4>
-                    <p className="text-gray-600">{detail.content}</p>
-                  </div>
+        <SectionHeading
+          subHeading="CONTACT US"
+          heading="Get in Touch With Our Team"
+          description="Have questions about our services or want to schedule an appointment? Reach out to us using any of the methods below."
+          centered
+        />
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-12">
+          <motion.div 
+            className="lg:col-span-1"
+            variants={itemVariants}
+          >
+            <div className="bg-white rounded-xl shadow-lg p-8 h-full">
+              <h3 className="text-2xl font-bold mb-6 text-secondary">Contact Information</h3>
+              
+              <div className="space-y-8">
+                {contactDetails.map((detail) => (
+                  <motion.div 
+                    key={detail.id} 
+                    className="flex items-start group"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mr-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                      <div className="text-primary group-hover:text-white transition-colors duration-300 text-xl">
+                        {detail.icon}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">{detail.title}</h4>
+                      <p className="text-gray-600">{detail.content}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              <div className="mt-10">
+                <h4 className="font-bold text-lg mb-4">Follow Us</h4>
+                <div className="flex space-x-4">
+                  {socialMedia.map((item) => (
+                    <a 
+                      key={item.id}
+                      href={item.href}
+                      aria-label={item.label}
+                      className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white text-gray-600 transition-colors duration-300"
+                    >
+                      {item.icon}
+                    </a>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="md:w-1/2">
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h3 className="text-2xl font-bold mb-6">Request an Appointment</h3>
+          <motion.div 
+            className="lg:col-span-2"
+            variants={itemVariants}
+          >
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold mb-6 text-secondary">Request an Appointment</h3>
               
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="John Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email Address</FormLabel>
-                        <FormControl>
-                          <Input placeholder="johndoe@example.com" type="email" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Phone Number</FormLabel>
-                        <FormControl>
-                          <Input placeholder="(123) 456-7890" type="tel" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="service"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Service Required</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-gray-700">Full Name</FormLabel>
                           <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select a service" />
-                            </SelectTrigger>
+                            <Input 
+                              placeholder="John Doe" 
+                              {...field} 
+                              className="rounded-lg border-gray-300 focus:border-primary focus:ring-primary"
+                            />
                           </FormControl>
-                          <SelectContent>
-                            <SelectItem value="general">General Checkup</SelectItem>
-                            <SelectItem value="cardiology">Cardiology</SelectItem>
-                            <SelectItem value="neurology">Neurology</SelectItem>
-                            <SelectItem value="orthopedics">Orthopedics</SelectItem>
-                            <SelectItem value="pediatrics">Pediatrics</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-gray-700">Email Address</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="johndoe@example.com" 
+                              type="email" 
+                              {...field} 
+                              className="rounded-lg border-gray-300 focus:border-primary focus:ring-primary"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-gray-700">Phone Number</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="(123) 456-7890" 
+                              type="tel" 
+                              {...field} 
+                              className="rounded-lg border-gray-300 focus:border-primary focus:ring-primary"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="service"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-gray-700">Service Required</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="rounded-lg border-gray-300 focus:border-primary focus:ring-primary">
+                                <SelectValue placeholder="Select a service" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="general">General Checkup</SelectItem>
+                              <SelectItem value="cardiology">Cardiology</SelectItem>
+                              <SelectItem value="neurology">Neurology</SelectItem>
+                              <SelectItem value="orthopedics">Orthopedics</SelectItem>
+                              <SelectItem value="pediatrics">Pediatrics</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
                   
                   <FormField
                     control={form.control}
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Additional Information</FormLabel>
+                        <FormLabel className="text-gray-700">Additional Information</FormLabel>
                         <FormControl>
                           <Textarea 
                             placeholder="Please provide any additional details about your appointment request"
                             rows={4}
                             {...field}
+                            className="rounded-lg border-gray-300 focus:border-primary focus:ring-primary resize-none"
                           />
                         </FormControl>
                         <FormMessage />
@@ -209,17 +281,22 @@ export function Contact() {
                     )}
                   />
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90" 
-                    disabled={isSubmitting}
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    {isSubmitting ? "Submitting..." : "Submit Request"}
-                  </Button>
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" 
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Submit Request"}
+                    </Button>
+                  </motion.div>
                 </form>
               </Form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>

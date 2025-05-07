@@ -62,6 +62,23 @@
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Add more margin to container on larger screens */
+  @media (min-width: 1280px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      max-width: 1536px;
+    }
+  }
 }
 
 @layer components {

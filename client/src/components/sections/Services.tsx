@@ -67,7 +67,7 @@ export function Services() {
       className="py-16 bg-gray-50"
       ref={ref}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeading
           subHeading="Our Services"
           heading="Comprehensive Healthcare Solutions"

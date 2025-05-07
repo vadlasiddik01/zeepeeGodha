@@ -58,29 +58,29 @@ export function Header() {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 bg-white z-50 transition-all duration-300 ${scrolled ? "shadow-lg py-2" : "py-4"}`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
+    <header className={`fixed top-0 left-0 right-0 bg-white z-50 transition-all duration-300 ${scrolled ? "shadow-lg py-3" : "py-5"}`}>
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center">
         <div className="flex items-center">
           <a href="#home" className="flex items-center" onClick={(e) => scrollToSection(e, "#home")}>
-            <span className="text-secondary text-2xl font-bold">
+            <span className="text-secondary text-2xl md:text-3xl font-bold">
               my<span className="text-primary">doctor</span>
             </span>
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-10 lg:space-x-12">
           {navLinks.map((link) => (
             link.dropdownItems ? (
               <DropdownMenu key={link.href}>
                 <DropdownMenuTrigger className="flex items-center text-gray-800 hover:text-primary font-medium focus:outline-none">
                   {link.label} <FaChevronDown className="ml-1 h-3 w-3" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="bg-white rounded-md shadow-lg p-2 min-w-[160px]">
+                <DropdownMenuContent align="end" className="bg-white rounded-md shadow-lg p-2 min-w-[180px]">
                   {link.dropdownItems.map((item) => (
                     <DropdownMenuItem 
                       key={item.href} 
-                      className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                      className="cursor-pointer hover:bg-gray-100 rounded-md p-2 my-1"
                       onClick={(e) => scrollToSection(e as any, item.href)}
                     >
                       {item.label}
@@ -103,7 +103,7 @@ export function Header() {
             href="#contact"
             onClick={(e) => scrollToSection(e, "#contact")}
           >
-            <Button variant="default" className="bg-primary hover:bg-primary/90 px-6 shadow-md transition-all duration-300 hover:shadow-lg">
+            <Button variant="default" className="bg-primary hover:bg-primary/90 px-7 py-2.5 shadow-md transition-all duration-300 hover:shadow-lg">
               Book Appointment
             </Button>
           </a>

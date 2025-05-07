@@ -59,7 +59,7 @@ export function Hero() {
 
   return (
     <section id="home" className="pt-20 sm:pt-24 md:pt-28 pb-12 md:pb-16 md:min-h-screen bg-gray-50 flex items-center overflow-hidden">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
           <motion.div 
             className="mb-8 md:mb-0 md:w-1/2 max-w-lg mx-auto md:mx-0"

@@ -108,67 +108,53 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              {/* Modern UI element replacing the image */}
+              {/* Modern UI element with doctor image */}
               <div className="rounded-[40px] overflow-hidden relative h-[380px] md:h-[480px] bg-gradient-to-br from-primary/80 to-blue-600/90 shadow-2xl">
                 {/* Abstract decorative shapes inside */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-full"></div>
                 <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-tr-full"></div>
                 
-                {/* Animated floating shapes for modern feel */}
-                <div className="absolute inset-0 overflow-hidden">
-                  {Array(6).fill(0).map((_, i) => (
+                {/* Doctor image centered in the card */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.div 
+                    className="w-full h-full"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <div 
+                      className="w-full h-full bg-contain bg-no-repeat bg-center"
+                      style={{ 
+                        backgroundImage: `url(${heroImage})`,
+                        backgroundPosition: 'center 10%'
+                      }}
+                    />
+                  </motion.div>
+                </div>
+                
+                {/* Subtle floating circles */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  {Array(4).fill(0).map((_, i) => (
                     <motion.div 
                       key={i}
                       className="absolute rounded-full bg-white/10"
                       style={{
-                        width: `${Math.random() * 100 + 50}px`,
-                        height: `${Math.random() * 100 + 50}px`,
+                        width: `${Math.random() * 60 + 30}px`,
+                        height: `${Math.random() * 60 + 30}px`,
                         top: `${Math.random() * 100}%`,
                         left: `${Math.random() * 100}%`,
                       }}
                       animate={{
-                        y: [0, -20, 0],
-                        opacity: [0.1, 0.2, 0.1],
+                        y: [0, -15, 0],
+                        opacity: [0.05, 0.1, 0.05],
                       }}
                       transition={{
-                        duration: 5 + i,
+                        duration: 4 + i,
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
                     />
                   ))}
-                </div>
-                
-                {/* Centered text content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8">
-                  <motion.div 
-                    className="text-2xl md:text-4xl font-bold mb-4 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
-                  >
-                    Advanced Medical Care
-                  </motion.div>
-                  <motion.div 
-                    className="text-lg md:text-xl font-light mb-6 text-center max-w-md"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.8 }}
-                  >
-                    Our expert team provides personalized health services with cutting-edge technology
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.6, duration: 0.5 }}
-                  >
-                    <Button 
-                      size="lg" 
-                      className="bg-white text-primary hover:bg-white/90 font-medium px-8 py-3 rounded-full"
-                    >
-                      Learn More
-                    </Button>
-                  </motion.div>
                 </div>
                 
                 {/* Decorative dot pattern in top right */}

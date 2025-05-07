@@ -43,7 +43,7 @@ export function About() {
   return (
     <section 
       id="about" 
-      className="py-20 bg-white"
+      className="py-14 bg-white"
       ref={ref}
     >
       <motion.div 
@@ -52,7 +52,7 @@ export function About() {
         initial="hidden"
         animate={isIntersecting ? "visible" : "hidden"}
       >
-        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-start gap-12 lg:gap-16">
           <motion.div 
             className="md:w-1/2"
             variants={itemVariants}
@@ -88,23 +88,23 @@ export function About() {
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
             
-            <div className="mt-12 p-6 border-l-4 border-primary bg-gray-50 rounded-r-lg shadow-sm">
+            <div className="mt-8 p-6 border-l-4 border-primary bg-gray-50 rounded-r-lg shadow-sm">
               <h3 className="text-xl font-bold mb-3 text-secondary">Membership Benefits</h3>
               <p className="text-gray-600 leading-relaxed">
                 Our membership program offers exclusive benefits including priority appointments, extended consultations, 
-                and personalized health plans. Join today to experience healthcare designed around your schedule and needs.
+                and personalized health plans designed around your needs.
               </p>
             </div>
           </motion.div>
           
           <motion.div 
-            className="md:w-1/2 relative -left-8 mt-12 md:mt-24"
+            className="md:w-1/2 relative -left-8"
             variants={itemVariants}
           >
             <div className="relative flex justify-start md:justify-center">
               {/* Main circular image container with border */}
               <motion.div 
-                className="w-[320px] h-[320px] md:w-[380px] md:h-[380px] relative"
+                className="w-[300px] h-[300px] md:w-[340px] md:h-[340px] relative"
                 variants={imageVariants}
               >
                 {/* Circle border animation */}
@@ -120,22 +120,22 @@ export function About() {
                 </div>
                 
                 {/* Experience badge - adjusted position */}
-                <div className="absolute -left-12 bottom-12 bg-white rounded-full p-4 shadow-lg flex items-center justify-center w-32 h-32">
+                <div className="absolute -left-10 bottom-12 bg-white rounded-full p-4 shadow-lg flex items-center justify-center w-28 h-28">
                   <div>
-                    <div className="text-4xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent text-center">10+</div>
-                    <div className="text-sm text-gray-700 text-center font-medium">Years Experience</div>
+                    <div className="text-3xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent text-center">10+</div>
+                    <div className="text-xs text-gray-700 text-center font-medium">Years Experience</div>
                   </div>
                 </div>
                 
                 {/* Stethoscope icon circle */}
-                <div className="absolute -right-6 top-12 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-md">
-                  <FaStethoscope className="text-white text-2xl" />
+                <div className="absolute -right-4 top-10 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-md">
+                  <FaStethoscope className="text-white text-xl" />
                 </div>
               </motion.div>
               
               {/* Background decorative elements */}
-              <div className="absolute -bottom-8 -right-8 w-3/4 h-3/4 bg-primary/5 rounded-full -z-10"></div>
-              <div className="absolute -top-12 -left-8 w-1/2 h-1/2 bg-gray-100 rounded-full -z-10"></div>
+              <div className="absolute -bottom-6 -right-6 w-3/4 h-3/4 bg-primary/5 rounded-full -z-10"></div>
+              <div className="absolute -top-8 -left-6 w-1/2 h-1/2 bg-gray-100 rounded-full -z-10"></div>
             </div>
           </motion.div>
         </div>

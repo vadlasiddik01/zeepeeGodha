@@ -98,13 +98,13 @@ export function About() {
           </motion.div>
           
           <motion.div 
-            className="md:w-1/2 relative"
+            className="md:w-1/2 relative -left-8 mt-12 md:mt-24"
             variants={itemVariants}
           >
-            <div className="relative flex justify-center">
+            <div className="relative flex justify-start md:justify-center">
               {/* Main circular image container with border */}
               <motion.div 
-                className="w-[350px] h-[350px] md:w-[400px] md:h-[400px] relative"
+                className="w-[320px] h-[320px] md:w-[380px] md:h-[380px] relative"
                 variants={imageVariants}
               >
                 {/* Circle border animation */}
@@ -119,23 +119,23 @@ export function About() {
                   ></div>
                 </div>
                 
-                {/* Experience badge */}
-                <div className="absolute -left-8 bottom-16 bg-white rounded-full p-4 shadow-lg flex items-center justify-center w-32 h-32">
+                {/* Experience badge - adjusted position */}
+                <div className="absolute -left-12 bottom-12 bg-white rounded-full p-4 shadow-lg flex items-center justify-center w-32 h-32">
                   <div>
-                    <div className="text-4xl font-bold text-primary text-center">10+</div>
-                    <div className="text-sm text-gray-700 text-center">Years Experience</div>
+                    <div className="text-4xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent text-center">10+</div>
+                    <div className="text-sm text-gray-700 text-center font-medium">Years Experience</div>
                   </div>
                 </div>
                 
                 {/* Stethoscope icon circle */}
-                <div className="absolute -right-4 top-8 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-md">
+                <div className="absolute -right-6 top-12 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-md">
                   <FaStethoscope className="text-white text-2xl" />
                 </div>
               </motion.div>
               
               {/* Background decorative elements */}
-              <div className="absolute -bottom-4 -right-4 w-3/4 h-3/4 bg-primary/5 rounded-full -z-10"></div>
-              <div className="absolute -top-4 -left-4 w-1/2 h-1/2 bg-gray-100 rounded-full -z-10"></div>
+              <div className="absolute -bottom-8 -right-8 w-3/4 h-3/4 bg-primary/5 rounded-full -z-10"></div>
+              <div className="absolute -top-12 -left-8 w-1/2 h-1/2 bg-gray-100 rounded-full -z-10"></div>
             </div>
           </motion.div>
         </div>

@@ -72,12 +72,10 @@ export function Testimonials() {
           {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.id}
-              className="bg-white rounded-xl border border-primary/10 shadow-sm p-6 relative overflow-hidden"
+              className="bg-white rounded-xl border-2 border-transparent shadow-sm p-6 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-[0_10px_30px_-5px_rgba(59,130,246,0.3)]"
               variants={itemVariants}
               whileHover={{ 
-                y: -10, 
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)", 
-                borderColor: "rgba(var(--color-primary), 0.3)"
+                y: -10
               }}
               transition={{ duration: 0.3 }}
             >

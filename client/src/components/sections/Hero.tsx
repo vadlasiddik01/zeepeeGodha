@@ -108,21 +108,74 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              {/* Main image container with blue background - exact styling from reference */}
-              <div className="rounded-[40px] bg-primary/30 overflow-hidden relative h-[380px] md:h-[480px]">
-                {/* The image will be rendered here from the asset */}
-                <div className="w-full h-full relative">
-                  <div 
-                    className="w-full h-full bg-contain bg-no-repeat bg-center"
-                    style={{ backgroundImage: `url(${heroImage})` }}
-                  />
+              {/* Modern UI element replacing the image */}
+              <div className="rounded-[40px] overflow-hidden relative h-[380px] md:h-[480px] bg-gradient-to-br from-primary/80 to-blue-600/90 shadow-2xl">
+                {/* Abstract decorative shapes inside */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-tr-full"></div>
+                
+                {/* Animated floating shapes for modern feel */}
+                <div className="absolute inset-0 overflow-hidden">
+                  {Array(6).fill(0).map((_, i) => (
+                    <motion.div 
+                      key={i}
+                      className="absolute rounded-full bg-white/10"
+                      style={{
+                        width: `${Math.random() * 100 + 50}px`,
+                        height: `${Math.random() * 100 + 50}px`,
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`,
+                      }}
+                      animate={{
+                        y: [0, -20, 0],
+                        opacity: [0.1, 0.2, 0.1],
+                      }}
+                      transition={{
+                        duration: 5 + i,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
+                  ))}
+                </div>
+                
+                {/* Centered text content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8">
+                  <motion.div 
+                    className="text-2xl md:text-4xl font-bold mb-4 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                  >
+                    Advanced Medical Care
+                  </motion.div>
+                  <motion.div 
+                    className="text-lg md:text-xl font-light mb-6 text-center max-w-md"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
+                  >
+                    Our expert team provides personalized health services with cutting-edge technology
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.6, duration: 0.5 }}
+                  >
+                    <Button 
+                      size="lg" 
+                      className="bg-white text-primary hover:bg-white/90 font-medium px-8 py-3 rounded-full"
+                    >
+                      Learn More
+                    </Button>
+                  </motion.div>
                 </div>
                 
                 {/* Decorative dot pattern in top right */}
                 <div className="absolute top-4 right-4">
                   <div className="grid grid-cols-6 grid-rows-6 gap-1">
                     {Array(36).fill(0).map((_, i) => (
-                      <div key={i} className="w-1.5 h-1.5 bg-secondary/70 rounded-full"></div>
+                      <div key={i} className="w-1.5 h-1.5 bg-white/70 rounded-full"></div>
                     ))}
                   </div>
                 </div>

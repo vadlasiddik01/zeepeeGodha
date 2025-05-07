@@ -125,14 +125,15 @@ export function Awards() {
                 boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)"
               }}
             >
-              <h3 className="text-5xl font-bold text-primary mb-2">
+              <h3 className="text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
                 <AnimatedCounter 
                   value={award.numValue} 
                   suffix={award.suffix} 
-                  isInView={isIntersecting} 
+                  isInView={isIntersecting}
+                  className="font-extrabold"
                 />
               </h3>
-              <p className="text-gray-600">{award.label}</p>
+              <p className="text-gray-600 font-medium">{award.label}</p>
             </motion.div>
           ))}
         </div>

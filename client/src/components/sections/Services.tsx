@@ -64,7 +64,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="py-16 bg-gray-50"
+      className="py-8 sm:py-10 md:py-12 bg-gray-50"
       ref={ref}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">

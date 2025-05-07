@@ -105,7 +105,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-b from-white to-gray-50"
+      className="py-8 sm:py-10 md:py-12 bg-gradient-to-b from-white to-gray-50"
       ref={ref}
     >
       <motion.div

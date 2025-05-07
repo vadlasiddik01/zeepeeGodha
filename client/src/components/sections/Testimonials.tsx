@@ -52,7 +52,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-12 sm:py-16 md:py-20 bg-white"
+      className="py-8 sm:py-10 md:py-12 bg-white"
       ref={ref}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">

@@ -43,7 +43,7 @@ export function About() {
   return (
     <section 
       id="about" 
-      className="py-10 sm:py-12 md:py-14 bg-white"
+      className="py-8 sm:py-10 md:py-12 bg-white"
       ref={ref}
     >
       <motion.div 

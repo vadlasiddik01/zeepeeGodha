@@ -27,7 +27,7 @@ export default function Home() {
       
       <div className="min-h-screen bg-white">
         <Header />
-        <main className="space-y-6 md:space-y-10 lg:space-y-16 xl:space-y-24">
+        <main className="space-y-4 md:space-y-6 lg:space-y-8">
           <Hero />
           <QuickNav />
           <About />

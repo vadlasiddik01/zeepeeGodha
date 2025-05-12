@@ -78,18 +78,18 @@ export function Hero() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-4 md:mb-6 leading-tight"
               variants={itemVariants}
             >
-              Best IVF Specialist in Jaipur for Personalized Fertility Care.
+              IVF Treatment in India by Dr.Zeepee Godha - Trusted Fertility Expert in Jaipur.
             </motion.h1>
             
             <motion.p 
               className="text-gray-600 text-base md:text-lg mb-6 md:mb-8 leading-relaxed"
               variants={itemVariants}
             >
-              Get compassionate, expert fertility care
-with Dr. Urmila Sharma, a leading IVF
-specialist in Jaipur with 18+ years of
-experience. We offer IVF, IUI, ICSI, and
-egg freezing—backed by high success rates and personalized support every step of the way.
+              Experience compassionate,
+result-driven care with Dr. Zeepee
+Godha — a renowned IVF specialist
+in Jaipur with over 17 years of expertise in reproductive medicine. From IVF and IUI to surrogacy and donor cycles, she offers
+personalized treatment plans with one of the highest IVF success rates in India.
             </motion.p>
             
             <motion.div variants={itemVariants} className="flex justify-center md:justify-start">

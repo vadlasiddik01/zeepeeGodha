@@ -27,8 +27,8 @@ const contactDetails = [
   {
     id: 1,
     icon: <LocationIcon />,
-    title: "Our Location",
-    content: "1st Floor, Ganga Heights, Near Tonk Road, Opposite Jaipur Hospital, Kailash Puri Colony, Gopalpura Flyover, Jaipur, Rajasthan, 302018"
+    title: "Clinic Location",
+    content: "1st Floor, Ganga Heights, near Tonk Road, Near Gopalpura Flyover, Opp. Jaipur Hospital, Kailash Puri Colony, Jaipur, Rajasthan 302018"
   },
   {
     id: 2,
@@ -116,8 +116,16 @@ export function Contact() {
       >
         <SectionHeading
           subHeading="CONTACT US"
-          heading="Start Your Parenthood Journey with Confidence"
-          description="Need help with fertility care or want to consult Dr. Urmila Sharma? Contact us or book your appointment today—we're here to support you."
+          heading="Connect with Our Fertility Experts"
+          description="Have questions
+or want to book a
+fertility
+consultation?
+Reach out or
+request an
+appointment
+below—we're
+here to help."
           centered
         />
         
@@ -250,10 +258,10 @@ export function Contact() {
                             </FormControl>
                             <SelectContent>
                               <SelectItem value="general">General Checkup</SelectItem>
-                              <SelectItem value="cardiology">Cardiology</SelectItem>
-                              <SelectItem value="neurology">Neurology</SelectItem>
-                              <SelectItem value="orthopedics">Orthopedics</SelectItem>
-                              <SelectItem value="pediatrics">Pediatrics</SelectItem>
+                              <SelectItem value="cardiology">IVF</SelectItem>
+                              <SelectItem value="neurology">IUI</SelectItem>
+                              <SelectItem value="orthopedics">ICSI</SelectItem>
+                              <SelectItem value="pediatrics">Egg Freezing & Fertility Preservation</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />

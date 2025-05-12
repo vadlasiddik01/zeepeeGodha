@@ -58,24 +58,20 @@ export function About() {
             variants={itemVariants}
           >
             <SectionHeading
-              subHeading="ABOUT US"
-              heading="Best IVF Treatment in India by Dr. Urmila Sharma – 18+ Years of Fertility Excellence in
-Jaipur"
-              description="At Ishwa IVF, Dr. Urmila Sharma leads a dedicated team offering the best IVF treatment in
-India—combining compassion, expertise, and cutting-edge fertility care. With over 18 years of
-experience in gynecology and reproductive medicine, Dr. Urmila Sharma is a trusted name for
-IVF treatment in India, especially in Jaipur."
+              subHeading="About Dr. Zeepee Godha"
+              heading="Best IVF Treatment in India by Dr. Zeepee Godha - 17+ Years of Trusted Fertility Expertise in
+Jaipur."
+              description="At Ishwa IVF, Dr. Zeepee Godha brings over 17 years of excellence in gynecology and
+reproductive medicine. As a Senior Consultant at Indira IVF, Jaipur, she leads a compassionate
+team committed to guiding couples through their fertility journey with precision, care, and
+transparency."
             />
             <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-center md:text-left">
-            Our clinic follows a patient-first approach—merging advanced reproductive technology with
-genuine empathy. Whether you're considering IVF, IUI, ICSI, or egg freezing, every treatment is
-thoughtfully personalized to support your unique fertility journey.</p>
-            <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-center md:text-left">We are committed to creating a calm, respectful, and supportive space where every individual or
-couple feels heard, empowered, and deeply cared for.
-🔹 Ethical care.
-🔹 High IVF success rates.
-🔹 Advanced reproductive techniques.
-🔹 Transparent communication every step of the way.</p>
+            With a strong foundation in advanced fertility techniques—including IVF, IUI, ICSI, and donor
+programs—Dr.Zeepee Godha's approach blends science with empathy. Every treatment plan is
+personalized, ensuring patients feel informed, empowered, and fully supported.</p>
+            <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-center md:text-left">We're proud to be recognized for offering some of the best IVF treatment in India, with
+            consistently high success rates and ethical, patient-first care.</p>
             <div className="flex justify-center md:justify-start">
               <a 
                 href="#services" 

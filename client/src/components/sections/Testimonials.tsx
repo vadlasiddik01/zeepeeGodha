@@ -7,26 +7,26 @@ import { FaStar } from "react-icons/fa";
 const testimonials = [
   {
     id: 1,
-    name: "Deeksha sharma",
+    name: "Saloni",
     role: "Patient",
     avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    quote: "I would like to commend your entire staff for their exceptional kindness, compassion, and professionalism. From the reception to everyone made me feel comfortable and at ease. Their warm smiles and gentle manner put me at ease during what could have been a nervous experience.Please extend my appreciation to each and every one of them. Your team truly exemplifies the highest standards of medical care and customer service. Thank you once again for helping us start this new chapter in our lives. We're grateful for your ongoing care and guidance throughout my pregnancy.",
+    quote: "I had lost hope after three failed IUI cycles elsewhere. Meeting Dr. Zeepee was the turning point. Her honest approach and positivity gave me confidence—and now I'm holding my baby girl in my arms.",
     rating: 5
   },
   {
     id: 2,
-    name: "Suman yadav",
+    name: "Bhavna",
     role: "Patient",
-    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    quote: "Its been a great experience at Ishwa ivf. Dr. Urmila Sharma maam is extremely skilled and very kind and compassionate. The way she treats patients is very nice. The center is very nice and clean . The whole process of ivf becomes smooth at ishwa ivf. The staff is friendly.",
+    avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+    quote: "The hospital is ideally located, extremely clean, and thoughtfully designed. From the doctors to the support staff, everyone is humble, cooperative, and always welcoming—with a smile and a genuine desire to address your concerns.Dr. Zeepee Godha is an extraordinary human being. She listens with empathy, adjusts treatment with compassion, and always prioritizes the comfort and needs of her patients. Her calm and understanding approach makes all the difference.This is undoubtedly the best IVF center in Jaipur to begin your fertility journey. Even in Dr. Zeepee's absence, the other doctors step in with the same level of care and dedication. Truly a team you can trust.",
     rating: 5
   },
   {
     id: 3,
     name: "Vijay sharma",
-    role: "Patient",
+    role: "Ankit",
     avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    quote: "Dr Urmila Sharma is a highly skilled doctor for IVF . Please i highly recommend her for infertility treatment. Her results are almost 100%. She is very humble and soft spoken. Not only me but 2 of my knowns also got healthy babies with the help of her.",
+    quote: "People usually say, you can't find God during this kalyug, but, after meeting Dr Zeepee Godha mam at Ishwar IVF, we made it possible. For us, she came like an angel, who gave us the bestest gift ever. You handled everything very smoothly, and never allowed us to treat IVF as a tough treatment. You kept us motivated everytime, and transferred all our tensions to your head. We are really thankful to you for giving us this wonder, can't describe in words what you meant to us and what change you brought to our lives. You held our hand during that crucial time when we were out of all hopes. Thanku you is such a small word to describe your efforts, support and care. You are the best , with the bestest services at IVF centre.",
     rating: 5
   } 
 ];

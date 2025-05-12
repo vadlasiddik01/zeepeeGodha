@@ -10,26 +10,26 @@ const services = [
     id: 1,
     type: "Ivf",
     title: "🧬 IVF (In Vitro Fertilization)",
-    description: "Advanced assisted reproductive treatment for couples facing infertility, offering high IVF success rates with ethical and personalized care."
+    description: "Advanced IVF treatment in India with a high success rate, using personalized protocols and cutting-edge technology."
   },
   {
     id: 2,
     type: "Intra",
     title: "💉 IUI (Intrauterine Insemination)",
-    description: "A minimally invasive fertility treatment to improve chances of conception by placing processed sperm directly into the uterus."
+    description: "A less-invasive fertility solution, ideal for couples with mild fertility issues or unexplained infertility."
   },
   {
     id: 3,
     type: "Injection",
     title: "🧪 ICSI (Intracytoplasmic Sperm Injection)",
-    description: "State-of-the-art technique used in IVF cycles for male infertility, ensuring precision fertilization of the egg."
+    description: "Precise sperm injection technique for male factor infertility, improving fertilization chances in IVF cycles."
   }
   ,
   {
     id: 4,
     type: "Preservation",
     title: "❄️ Egg Freezing (Oocyte Cryopreservation)",
-    description: "Secure and preserve your fertility for the future with safe and effective egg freezing options."
+    description: "Secure your fertility with expert egg freezing services for medical, personal, or career-related reasons."
   }
 ];
 

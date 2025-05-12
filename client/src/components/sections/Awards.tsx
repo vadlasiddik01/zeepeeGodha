@@ -130,7 +130,7 @@ export function Awards() {
                   value={award.numValue} 
                   suffix={award.suffix} 
                   isInView={isIntersecting}
-                  className="font-extrabold"
+                  className="font-extrabold text-nowrap"
                 />
               </h3>
               <p className="text-gray-600 font-medium">{award.label}</p>

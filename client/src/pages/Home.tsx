@@ -29,11 +29,11 @@ export default function Home() {
         <Header />
         <main className="space-y-4 md:space-y-6 lg:space-y-8">
           <Hero />
+          <Awards />
           <QuickNav />
           <About />
           <Services />
           <Testimonials />
-          <Awards />
           <Contact />
           <DoctorBanner />
         </main>

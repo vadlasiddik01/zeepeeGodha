@@ -4,29 +4,30 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { getServiceIcon } from "@/lib/icons";
 
+
 const services = [
   {
     id: 1,
-    type: "general",
+    type: "Ivf",
     title: "🧬 IVF (In Vitro Fertilization)",
     description: "Advanced assisted reproductive treatment for couples facing infertility, offering high IVF success rates with ethical and personalized care."
   },
   {
     id: 2,
-    type: "general",
+    type: "Intra",
     title: "💉 IUI (Intrauterine Insemination)",
     description: "A minimally invasive fertility treatment to improve chances of conception by placing processed sperm directly into the uterus."
   },
   {
     id: 3,
-    type: "cardiology",
+    type: "Injection",
     title: "🧪 ICSI (Intracytoplasmic Sperm Injection)",
     description: "State-of-the-art technique used in IVF cycles for male infertility, ensuring precision fertilization of the egg."
   }
   ,
   {
     id: 4,
-    type: "neurology",
+    type: "Preservation",
     title: "❄️ Egg Freezing (Oocyte Cryopreservation)",
     description: "Secure and preserve your fertility for the future with safe and effective egg freezing options."
   }

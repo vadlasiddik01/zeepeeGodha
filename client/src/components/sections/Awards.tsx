@@ -107,7 +107,7 @@ export function Awards() {
           centered
         />
         
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-2 mt-10">
           {awards.map((award) => (
             <motion.div
               key={award.id}

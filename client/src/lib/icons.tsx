@@ -2,22 +2,22 @@ import React from "react";
 import { FaHeartbeat, FaStethoscope, FaBrain, FaBone, FaChild, FaCapsules, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaClipboardList, FaComments, FaCalendarCheck } from "react-icons/fa";
+import Injection from "@assets/injection.svg";
+import Intra from "@assets/intrauterine.svg";
+import Ivf from "@assets/ivf.svg";
+import Preservation from "@assets/preservation.svg";
 
 // Function to get the appropriate icon based on service type
 export const getServiceIcon = (type: string): React.ReactNode => {
   switch (type) {
-    case "general":
-      return <FaHeartbeat className="text-primary text-2xl" />;
-    case "cardiology":
-      return <FaStethoscope className="text-primary text-2xl" />;
-    case "neurology":
-      return <FaBrain className="text-primary text-2xl" />;
-    case "orthopedics":
-      return <FaBone className="text-primary text-2xl" />;
-    case "pediatrics":
-      return <FaChild className="text-primary text-2xl" />;
-    case "pharmacy":
-      return <FaCapsules className="text-primary text-2xl" />;
+    case "Ivf":
+      return <Ivf className="text-primary text-2xl" />;
+    case "Intra":
+      return <Intra className="text-primary text-2xl" />;
+    case "Injection":
+      return <Injection className="text-primary text-2xl" />;
+    case "Preservation":
+      return <Preservation className="text-primary text-2xl" />;
     default:
       return <FaHeartbeat className="text-primary text-2xl" />;
   }

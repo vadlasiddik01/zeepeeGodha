@@ -9,7 +9,7 @@ const testimonials = [
     id: 1,
     name: "Deeksha sharma",
     role: "Patient",
-    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+    avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
     quote: "I would like to commend your entire staff for their exceptional kindness, compassion, and professionalism. From the reception to everyone made me feel comfortable and at ease. Their warm smiles and gentle manner put me at ease during what could have been a nervous experience.Please extend my appreciation to each and every one of them. Your team truly exemplifies the highest standards of medical care and customer service. Thank you once again for helping us start this new chapter in our lives. We're grateful for your ongoing care and guidance throughout my pregnancy.",
     rating: 5
   },
@@ -17,7 +17,7 @@ const testimonials = [
     id: 2,
     name: "Suman yadav",
     role: "Patient",
-    avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
     quote: "Its been a great experience at Ishwa ivf. Dr. Urmila Sharma maam is extremely skilled and very kind and compassionate. The way she treats patients is very nice. The center is very nice and clean . The whole process of ivf becomes smooth at ishwa ivf. The staff is friendly.",
     rating: 5
   },

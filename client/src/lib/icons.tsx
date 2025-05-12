@@ -11,13 +11,13 @@ import Preservation from "@assets/preservation.svg";
 export const getServiceIcon = (type: string): React.ReactNode => {
   switch (type) {
     case "Ivf":
-      return <Ivf className="text-primary text-2xl" />;
+      return <img src={Ivf} alt="Ivf" className="text-primary text-2xl" />;
     case "Intra":
-      return <Intra className="text-primary text-2xl" />;
+      return <img src={Intra} alt="Intra" className="text-primary text-2xl" />;
     case "Injection":
-      return <Injection className="text-primary text-2xl" />;
+      return <img src={Injection} alt="Injection" className="text-primary text-2xl" />;
     case "Preservation":
-      return <Preservation className="text-primary text-2xl" />;
+      return <img src={Preservation} alt="Preservation"  className="text-primary text-2xl" />;
     default:
       return <FaHeartbeat className="text-primary text-2xl" />;
   }

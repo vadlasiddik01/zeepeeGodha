@@ -15,30 +15,30 @@ interface Award {
 const awards: Award[] = [
   {
     id: 1,
-    value: "99%",
-    numValue: 99,
+    value: "25000+",
+    numValue: 25000,
     label: "Happy Patients",
-    suffix: "%"
+    suffix: "+"
   },
   {
     id: 2,
-    value: "70+",
-    numValue: 70,
-    label: "Team Members",
+    value: "7000+",
+    numValue: 7000,
+    label: "IVF Procedures",
     suffix: "+"
   },
   {
     id: 3,
-    value: "20+",
-    numValue: 20,
+    value: "17+",
+    numValue: 17,
     label: "Year Experience",
     suffix: "+"
   },
   {
     id: 4,
-    value: "18+",
-    numValue: 18,
-    label: "Global Awards",
+    value: "5000+",
+    numValue: 5000,
+    label: "Fertility Enhancing Surgeries",
     suffix: "+"
   }
 ];

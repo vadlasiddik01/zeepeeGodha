@@ -8,38 +8,27 @@ const services = [
   {
     id: 1,
     type: "general",
-    title: "General Checkup",
-    description: "Comprehensive health assessment to evaluate your overall well-being and identify potential health concerns."
+    title: "🧬 IVF (In Vitro Fertilization)",
+    description: "Advanced assisted reproductive treatment for couples facing infertility, offering high IVF success rates with ethical and personalized care."
   },
   {
     id: 2,
-    type: "cardiology",
-    title: "Cardiology",
-    description: "Specialized care for heart conditions including diagnostics, treatment, and preventive services."
+    type: "general",
+    title: "💉 IUI (Intrauterine Insemination)",
+    description: "A minimally invasive fertility treatment to improve chances of conception by placing processed sperm directly into the uterus."
   },
   {
     id: 3,
-    type: "neurology",
-    title: "Neurology",
-    description: "Expert diagnosis and treatment of disorders affecting the nervous system and brain."
-  },
+    type: "cardiology",
+    title: "🧪 ICSI (Intracytoplasmic Sperm Injection)",
+    description: "State-of-the-art technique used in IVF cycles for male infertility, ensuring precision fertilization of the egg."
+  }
+  ,
   {
     id: 4,
-    type: "orthopedics",
-    title: "Orthopedics",
-    description: "Treatment for bone and joint conditions, fractures, sports injuries, and rehabilitation services."
-  },
-  {
-    id: 5,
-    type: "pediatrics",
-    title: "Pediatrics",
-    description: "Compassionate healthcare for children from newborns to adolescents, including preventive care."
-  },
-  {
-    id: 6,
-    type: "pharmacy",
-    title: "Pharmacy",
-    description: "Convenient access to prescribed medications with expert pharmacist consultation and guidance."
+    type: "neurology",
+    title: "❄️ Egg Freezing (Oocyte Cryopreservation)",
+    description: "Secure and preserve your fertility for the future with safe and effective egg freezing options."
   }
 ];
 

@@ -28,13 +28,13 @@ const contactDetails = [
     id: 1,
     icon: <LocationIcon />,
     title: "Our Location",
-    content: "123 Medical Center Drive, Healthville, 10001"
+    content: "1st Floor, Ganga Heights, Near Tonk Road, Opposite Jaipur Hospital, Kailash Puri Colony, Gopalpura Flyover, Jaipur, Rajasthan, 302018"
   },
   {
     id: 2,
     icon: <PhoneIcon />,
     title: "Phone Number",
-    content: "(123) 456-7890"
+    content: "93513-33705"
   },
   {
     id: 3,
@@ -116,8 +116,8 @@ export function Contact() {
       >
         <SectionHeading
           subHeading="CONTACT US"
-          heading="Get in Touch With Our Team"
-          description="Have questions about our services or want to schedule an appointment? Reach out to us using any of the methods below."
+          heading="Start Your Parenthood Journey with Confidence"
+          description="Need help with fertility care or want to consult Dr. Urmila Sharma? Contact us or book your appointment today—we're here to support you."
           centered
         />
         

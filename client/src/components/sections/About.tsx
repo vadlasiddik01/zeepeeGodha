@@ -59,13 +59,23 @@ export function About() {
           >
             <SectionHeading
               subHeading="ABOUT US"
-              heading="A Wealth of Experience To Heal and Help You."
-              description="We bring together a team of highly qualified medical professionals with decades of combined experience."
+              heading="Best IVF Treatment in India by Dr. Urmila Sharma – 18+ Years of Fertility Excellence in
+Jaipur"
+              description="At Ishwa IVF, Dr. Urmila Sharma leads a dedicated team offering the best IVF treatment in
+India—combining compassion, expertise, and cutting-edge fertility care. With over 18 years of
+experience in gynecology and reproductive medicine, Dr. Urmila Sharma is a trusted name for
+IVF treatment in India, especially in Jaipur."
             />
             <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-center md:text-left">
-              Our mission is to provide personalized care that addresses your unique health needs with compassion and expertise.
-              We strive to create a comfortable and welcoming environment where patients feel heard and valued.
-            </p>
+            Our clinic follows a patient-first approach—merging advanced reproductive technology with
+genuine empathy. Whether you're considering IVF, IUI, ICSI, or egg freezing, every treatment is
+thoughtfully personalized to support your unique fertility journey.</p>
+            <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-center md:text-left">We are committed to creating a calm, respectful, and supportive space where every individual or
+couple feels heard, empowered, and deeply cared for.
+🔹 Ethical care.
+🔹 High IVF success rates.
+🔹 Advanced reproductive techniques.
+🔹 Transparent communication every step of the way.</p>
             <div className="flex justify-center md:justify-start">
               <a 
                 href="#services" 

@@ -78,15 +78,18 @@ export function Hero() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-4 md:mb-6 leading-tight"
               variants={itemVariants}
             >
-              Best Medical Clinic For Your Healthcare
+              Best IVF Specialist in Jaipur for Personalized Fertility Care.
             </motion.h1>
             
             <motion.p 
               className="text-gray-600 text-base md:text-lg mb-6 md:mb-8 leading-relaxed"
               variants={itemVariants}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, 
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Get compassionate, expert fertility care
+with Dr. Urmila Sharma, a leading IVF
+specialist in Jaipur with 18+ years of
+experience. We offer IVF, IUI, ICSI, and
+egg freezing—backed by high success rates and personalized support every step of the way.
             </motion.p>
             
             <motion.div variants={itemVariants} className="flex justify-center md:justify-start">

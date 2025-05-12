@@ -7,28 +7,28 @@ import { FaStar } from "react-icons/fa";
 const testimonials = [
   {
     id: 1,
-    name: "Jack Brown",
-    role: "Designer",
+    name: "Deeksha sharma",
+    role: "Patient",
     avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    quote: "The doctors and staff at MyDoctor are exceptional. They took the time to understand my concerns and provided personalized care that made me feel valued as a patient.",
+    quote: "I would like to commend your entire staff for their exceptional kindness, compassion, and professionalism. From the reception to everyone made me feel comfortable and at ease. Their warm smiles and gentle manner put me at ease during what could have been a nervous experience.Please extend my appreciation to each and every one of them. Your team truly exemplifies the highest standards of medical care and customer service. Thank you once again for helping us start this new chapter in our lives. We're grateful for your ongoing care and guidance throughout my pregnancy.",
     rating: 5
   },
   {
     id: 2,
-    name: "Jack Brown",
-    role: "Designer",
+    name: "Suman yadav",
+    role: "Patient",
     avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    quote: "I've been coming to MyDoctor for years, and the quality of care is consistently outstanding. The online booking system and telehealth options make managing my health so convenient.",
+    quote: "Its been a great experience at Ishwa ivf. Dr. Urmila Sharma maam is extremely skilled and very kind and compassionate. The way she treats patients is very nice. The center is very nice and clean . The whole process of ivf becomes smooth at ishwa ivf. The staff is friendly.",
     rating: 5
   },
   {
     id: 3,
-    name: "Jack Brown",
-    role: "Designer",
+    name: "Vijay sharma",
+    role: "Patient",
     avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    quote: "After searching for a doctor who would truly listen, I found MyDoctor. The specialists here provided a comprehensive treatment plan that has significantly improved my health and quality of life.",
+    quote: "Dr Urmila Sharma is a highly skilled doctor for IVF . Please i highly recommend her for infertility treatment. Her results are almost 100%. She is very humble and soft spoken. Not only me but 2 of my knowns also got healthy babies with the help of her.",
     rating: 5
-  }
+  } 
 ];
 
 export function Testimonials() {

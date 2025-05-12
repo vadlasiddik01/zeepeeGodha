@@ -125,7 +125,7 @@ export function Awards() {
                 boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)"
               }}
             >
-              <h3 className="text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent min-w-0 overflow-hidden">
+              <h3 className="text-[2.5rem] sm:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent min-w-0 overflow-hidden">
                 <AnimatedCounter 
                   value={award.numValue} 
                   suffix={award.suffix} 
